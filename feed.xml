@@ -5,8 +5,8 @@
     <description>An example blog site for the It&#39;s Always Sassy In Philadelphia workshop</description>
     <link>http://axamei.github.com/sassyinphilly/</link>
     <atom:link href="http://axamei.github.com/sassyinphilly/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 05 Feb 2016 16:42:03 -0500</pubDate>
-    <lastBuildDate>Fri, 05 Feb 2016 16:42:03 -0500</lastBuildDate>
+    <pubDate>Fri, 05 Feb 2016 16:58:19 -0500</pubDate>
+    <lastBuildDate>Fri, 05 Feb 2016 16:58:19 -0500</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       
@@ -412,7 +412,6 @@
   &lt;span class=&quot;k&quot;&gt;border-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#3bbfce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;See: &lt;a href=&quot;http://thesassway.com/editorial/sass-vs-scss-which-syntax-is-better&quot;&gt;Sass vs. SCSS: which syntax is better? - &lt;em&gt;The Sass Way&lt;/em&gt;&lt;/a&gt; for more info&lt;/p&gt;
 </description>
         
           <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;Y&lt;/span&gt;ou&#39;ll find two different ways of getting sassy. There is Sass and SCSS (Sassy CSS). The Sass syntax was inherited from HAML--it cares about indentation levels and white-space. There&#39;s a clear difference between Sass and CSS. SCSS (Sassy CSS) was introduced as &quot;the new main syntax&quot; for Sass and builds on the existing syntax of CSS. We like to think of SCSS as Super CSS. &lt;/p&gt;
