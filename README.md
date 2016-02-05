@@ -50,10 +50,92 @@ Because.
 
 > Task #2: Organize your styles into sensible groups and give them practical names
 
-![Alt Text](https://raw.githubusercontent.com/axamei/sassyinphilly/master/app/images/modularity.png)
+We want to change from our singular 2000+ line CSS file to a more scalable and modular architecture for our styles. Break the files down into partials and organize them and name them in a sensible manner. Do what makes the most sense for your team. 
+
+One approach:
+
+```
+stylesheets/
+|
+|-- modules/              # Common modules
+|   |-- _all.scss         # Include to get all modules
+|   |-- _utility.scss     # Module name
+|   |-- _colors.scss      # Etc...
+|   ...
+|
+|-- partials/             # Partials
+|   |-- _base.sass        # imports for all mixins + global project variables
+|   |-- _buttons.scss     # buttons
+|   |-- _figures.scss     # figures
+|   |-- _grids.scss       # grids
+|   |-- _typography.scss  # typography
+|   |-- _reset.scss       # reset
+|   ...
+|
+|-- vendor/               # CSS or Sass from other projects
+|   |-- _colorpicker.scss
+|   |-- _jquery.ui.core.scss
+|   ...
+|
+`-- main.scss            # primary Sass file
+```
+
+Another approach:
+
+```
+sass/ 
+| 
+|– base/ 
+|   |– _reset.scss       # Reset/normalize 
+|   |– _typography.scss  # Typography rules 
+|   ...                  # Etc… 
+| 
+|– components/ 
+|   |– _buttons.scss     # Buttons 
+|   |– _carousel.scss    # Carousel 
+|   |– _cover.scss       # Cover 
+|   |– _dropdown.scss    # Dropdown 
+|   |– _navigation.scss  # Navigation 
+|   ...                  # Etc… 
+| 
+|– helpers/ 
+|   |– _variables.scss   # Sass Variables 
+|   |– _functions.scss   # Sass Functions 
+|   |– _mixins.scss      # Sass Mixins 
+|   |– _helpers.scss     # Class & placeholders helpers 
+|   ...                  # Etc… 
+| 
+|– layout/ 
+|   |– _grid.scss        # Grid system 
+|   |– _header.scss      # Header 
+|   |– _footer.scss      # Footer 
+|   |– _sidebar.scss     # Sidebar 
+|   |– _forms.scss       # Forms 
+|   ...                  # Etc… 
+| 
+|– pages/ 
+|   |– _home.scss        # Home specific styles 
+|   |– _contact.scss     # Contact specific styles 
+|   ...                  # Etc… 
+| 
+|– themes/ 
+|   |– _theme.scss       # Default theme 
+|   |– _admin.scss       # Admin theme 
+|   ...                  # Etc… 
+| 
+|– vendors/ 
+|   |– _bootstrap.scss   # Bootstrap 
+|   |– _jquery-ui.scss   # jQuery UI 
+|   ...                  # Etc… 
+| 
+| 
+`– main.scss             # primary Sass file
+```
+
 See: [*Snook, Jonathan* - Scalable and Modular Architecture for CSS](https://smacss.com/book/)
 
 ![Alt Text](https://raw.githubusercontent.com/axamei/sassyinphilly/master/app/images/bem.png)
+
 See: [*Css Tricks* - BEM 101](https://css-tricks.com/bem-101/)
 
 ## Sass Basics
