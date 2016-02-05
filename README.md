@@ -50,7 +50,8 @@ Because.
 
 > Task #2: Organize your styles and give them appropriate names
 
-SMACSS & BEM
+- SMACSS 
+- BEM
 
 ## Sass Basics
 
@@ -60,18 +61,14 @@ SMACSS & BEM
 
 > Task #4: Import framework / mixin libraries
 
-### Bootstrap & Foundation
-
-### Bourbon, Neat, Bitters, Refills
-
-### Susy 
-
-### Breakpoint
+- Bootstrap & Foundation
+- Bourbon, Neat, Bitters, Refills
+- Susy 
+- Breakpoint
 
 ## Working with Build Tools
 
 > Task #5: Customize gulpfile
 
-### Gulp
-
-### Grunt, Broccoli, Brunch, Webpack, Etc.
+- Gulp 
+- Grunt, Broccoli, Brunch, Webpack, Etc.
