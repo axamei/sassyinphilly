@@ -6,10 +6,12 @@ var ghPages = require('gulp-gh-pages');
 
 gulp.task('styles', function () {
   return gulp.src('./app/styles/main.scss')
+    .pipe($.plumber({
+      errorHandler: $.notify.onError("Error: <%= error.message %>")}))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: [
-        require('node-normalize-scss').includePaths,
+        // require('node-normalize-scss').includePaths,
         require('bourbon').includePaths,
         './node_modules/susy/sass/',
         './node_modules/breakpoint-sass/stylesheets/'],
@@ -33,10 +35,11 @@ gulp.task('styles', function () {
         '.js .nav-collapse.closed',
         '.js .nav-collapse ul li a',
         '.nav-toggle',
-        '.nav-toggle:hover'
-      ]
-    }))
+        '.nav-toggle:hover']}))
     .pipe($.cssnano())
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions']
+    }))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('./dist/styles/'))
     .pipe(reload({stream: true}));
@@ -121,7 +124,7 @@ gulp.task('serve', ['build:dev'], function () {
     }
   });
 
-  gulp.watch('./app/**/*.{md,markdown,html}', ['build']);
+  gulp.watch('./app/**/*.{md,markdown,html}', ['build:dev']);
   gulp.watch('./app/styles/**/*.scss', ['styles']);
   gulp.watch('./app/scripts/**/*.js', ['scripts']);
   gulp.watch('./app/images/', ['images']);

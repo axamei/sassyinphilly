@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "Nesting"
+date:   2016-01-04
+---
+
+<p class="intro"><span class="dropcap">W</span>hen writing HTML you've probably noticed that it has a clear nested and visual hierarchy. CSS, on the other hand, doesn't.</p>
+
+Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice.
+
+{% highlight sass %}
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+{% endhighlight %}
+
+You'll notice that the ul, li, and a selectors are nested inside the nav selector. This is a great way to organize your CSS and make it more readable. 
+
+{% highlight css %}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+{% endhighlight %}
+
+## Parent selectors
+
+Referencing parent selectors by using the ampersand `&` can be a powerful tool, if used right. There are simple uses of this feature as well as some very complex uses of this feature.
+
+{% highlight sass %}
+/*SCSS*/
+a {
+  color: #0090B2;
+
+  &:hover {
+    color: #FF7A00;
+  }
+
+  &:active {
+    color: #B25500;
+  }
+}
+{% endhighlight %}
+
+With Sass all we have to do is nest the next ruleset and attach the `&` in place of the repeating selector and we're golden.
+
+{% highlight css %}
+/*CSS*/
+a {
+  color: #0090B2;
+}
+
+a:hover {
+  color: #FF7A00;
+}
+
+a:active {
+  color: #B25500;
+}
+{% endhighlight %}

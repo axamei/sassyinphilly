@@ -41,7 +41,7 @@ Because.
 
 > Task #1: Audit your existing CSS file(s)
 
-- [CSS Lint](http://csslint.net/) might hurt your feelings, but will make your code better.
+- [CSS Lint](http://csslint.net/) pinpoints issues in your CSS. Take the warnings as suggestions on how to improve your CSS. 
 - [Chrome DevTools Audit Panel](https://developer.chrome.com/devtools#audits)  can analyze a page as it loads. Then provides suggestions and optimizations for decreasing page load time and increase perceived (and real) responsiveness.
 - [CSS Dig](http://cssdig.com/) is an automated script that runs through all of your code to help you see it visually. A similar tool is [StyleStats](http://www.stylestats.org/) and [CSSStats](http://cssstats.com/), where you type in a url to survey its CSS.
 - [Dust-Me Selectors](https://addons.mozilla.org/en-US/firefox/addon/dust-me-selectors/) is an add-on for Firebug in Firefox that finds unused selectors.
@@ -50,19 +50,24 @@ Because.
 
 > Task #2: Organize your styles into sensible groups and give them practical names
 
-- SMACSS 
-- BEM
+![Alt Text](https://raw.githubusercontent.com/axamei/sassyinphilly/master/app/images/modularity.png)
+See: [*Snook, Jonathan* - Scalable and Modular Architecture for CSS](https://smacss.com/book/)
+
+![Alt Text](https://raw.githubusercontent.com/axamei/sassyinphilly/master/app/images/bem.png)
+See: [*Css Tricks* - BEM 101](https://css-tricks.com/bem-101/)
 
 ## Sass Basics
 
 > Task #3: Refactor your CSS file(s) to Sass / Sassy CSS files
 
+- Preprocessing
 - Sass vs. SCSS Syntax
 - Variables
-- Nesting
-- Parent selectors
+- Nesting and parent selectors
+- Partials and imports
 - Mixins and includes
-- Extends and placeholders
+- Extends and inheritance
+- Operations
 
 ## Working with Frameworks & Mixin Libraries
 
@@ -75,7 +80,15 @@ Because.
 
 ## Working with Build Tools
 
-> Task #5: Customize your gulpfile
+> Task #5: Understanding and customizing your gulpfile
 
 - Gulp 
 - Grunt, Broccoli, Brunch, Webpack, Etc.
+
+## References
+
+- [*Sass-lang* - Sass Documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+- [*Sass-lang* - Sass Basics](http://sass-lang.com/guide)
+- [*Sass Guidelines* - An opinionated styleguide for writing sane, maintainable and scalable Sass](http://sass-guidelin.es/)
+- [*The Sass Way* - Sass vs. SCSS: which syntax is better?](http://thesassway.com/editorial/sass-vs-scss-which-syntax-is-better)
+

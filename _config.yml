@@ -1,4 +1,4 @@
-title: Your Blog
+title: It's Always Sassy In Philadelphia
 description: An example blog site for the It's Always Sassy In Philadelphia workshop
 
 url: http://axamei.github.com
@@ -6,6 +6,7 @@ baseurl: "/sassyinphilly"
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
 
+markdown: kramdown
 highlighter: pygments
 gems: [jekyll-paginate]
 paginate: 5

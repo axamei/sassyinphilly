@@ -17,7 +17,8 @@ BUTTON DEFAULTS
   border-radius: 4px;
   cursor: pointer;
   margin-bottom: .5em;
-  // @include transition(background-color 0.14s ease-in-out);
+
+  @include transition(background-color 0.14s ease-in-out);
 
   // hovering on the btn
   &:hover, &:focus {
@@ -29,10 +30,9 @@ BUTTON DEFAULTS
   // clicking on the button
   &:active {
     top: 1px; // adds a tiny hop to the click
+
   } // end active
-
 } // end .button
-
 
 // Default button class
 .button {
@@ -40,6 +40,7 @@ BUTTON DEFAULTS
 
   &-secondary {
     @extend %btn;
+
     background-color: $secondary-color;
 
     &:hover {
@@ -49,6 +50,7 @@ BUTTON DEFAULTS
 
   &-tertiary {
     @extend %btn;
+
     background-color: $tertiary-color;
 
     &:hover {
@@ -57,10 +59,10 @@ BUTTON DEFAULTS
   }
 }
 
-
 // Outline Button
 .button__outline {
   @extend %btn;
+
   background-color: transparent;
   border: 3px solid $primary-color;
   color: $primary-color;
@@ -70,4 +72,3 @@ BUTTON DEFAULTS
     color: $white;
   }
 }
-
