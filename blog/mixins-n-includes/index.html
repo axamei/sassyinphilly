@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Image in Post</title>
+    <title>Mixins and Includes</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/sassyinphilly/images/favicon.ico" />
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="/sassyinphilly/styles/main.css">
     <!--[if IE 8]><link rel="stylesheet" href="/sassyinphilly/styles/ie.css"><![endif]-->
-    <link rel="canonical" href="http://axamei.github.com/sassyinphilly/blog/image-in-post/">
+    <link rel="canonical" href="http://axamei.github.com/sassyinphilly/blog/mixins-n-includes/">
 
     <!-- Modernizr -->
     <script src="/sassyinphilly/scripts/vendor/modernizr.custom.15390.js" type="text/javascript"></script>
@@ -74,33 +74,44 @@ ga('send', 'pageview');
       <div class="container">
          <div class="post">
   
-  <h1 class="postTitle">Image in Post</h1>
-  <p class="meta">December 11, 2014 | <span class="time">1</span> Minute Read</p>
+  <h1 class="postTitle">Mixins and Includes</h1>
+  <p class="meta">January 06, 2016 | <span class="time">1</span> Minute Read</p>
 
-  <p class="intro"><span class="dropcap">L</span>orem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.</p>
+  <p class="intro"><span class="dropcap">S</span>ome things in CSS are a bit tedious to write, especially with CSS3 and the many vendor prefixes that exist. A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. </p>
 
-<p>Bahamontes lanterne rouge normandie belgium. Fred paris-nice arrivere, for omnium commissaire ronde van vlaanderen horizontally stiff but vertically compliant muur, valkenberg jens paris-roubaix. Meyrueis belleville cavendish bianchi, rochefort echelon in soigneur ten dam omloop het volk, bettini aerts! Tour de mont aigoual cat among the pigeons rekelberg omloop het nieuwsblad paris-nice, dwars door vlaanderen coppi the colnago knockteberg anduze.</p>
+<p>You can even pass in values to make your mixin more flexible. A good use of a mixin is for vendor prefixes (i.e., if you’re not using autoprefixer).</p>
 
-<p><img src="/sassyinphilly/images/touring.jpg" alt="" /></p>
+<figure class="highlight"><pre><code class="language-sass" data-lang="sass"><span class="cm">/*SCSS*/</span>
+<span class="k">@mixin</span><span class="nf"> border-radius</span><span class="p">(</span><span class="nv">$radius</span><span class="p">)</span> <span class="err">{</span>
+  <span class="na">-webkit-border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="err">;</span>
+     <span class="na">-moz-border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="err">;</span>
+      <span class="na">-ms-border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="err">;</span>
+          <span class="na">border-radius</span><span class="o">:</span> <span class="nv">$radius</span><span class="err">;</span>
+<span class="err">}</span>
 
-<p>Kaperij lanterne rouge musette rund um koln bruges thor smash, geraardsbergen riis petacchi molteni pedaling squares. Virenque vande velde, valkenberg gutter pantani parcours gaul domestique, tilford campagnolo around madone. Bruyneel criterium ritte, gorgeous george the trousselier feed zone bruges nokere koerse, parcours gilbert garin? Anquetil valkenberg bettini cat among the pigeons.</p>
+<span class="nc">.box</span> <span class="err">{</span> <span class="o">@</span><span class="nt">include</span> <span class="nt">border-radius</span><span class="o">(</span><span class="nt">10px</span><span class="o">);</span> <span class="err">}</span></code></pre></figure>
 
-<p>Campagnolo the hors delai de wolf as the toto turns venga venga venga, sanchez nys. Pantani hell of the north oude kwaremont nitto koppenberg, tiegemberg van steenbergen lombardie flamme rouge lemond e3 prijs vlaanderen.</p>
+<p>To create a mixin you use the <code>@mixin</code> directive and give it a name. We’ve named our mixin <code>border-radius</code>. We’re also using the variable <code>$radius</code> inside the parentheses so we can pass in a radius of whatever we want. After you create your mixin, you can then use it as a CSS declaration starting with <code>@include</code> followed by the name of the mixin. When your CSS is generated it’ll look like this:</p>
 
-<p>Planckaert berg ter stene freire gorgeous george in rouleur derby, vaughters fabianese omloop het volk rouleur play rouleur derby. Bottechia petacchi, milan-san remo van summeren off the back cutters the cassette.</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/*CSS*/</span>
+<span class="nc">.box</span> <span class="p">{</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>Nyvelocity pyrenees vande velde merckx. La fleche wallonne fixie pau, with muur hors categorie boonen aerts operacion puerto, topsport vlaanderen pereiro randonneur. This greek text is produced by rouleur derby, almost certainly the best fantasy cycling game in the world snob trousselier col du galibier, flanders venga venga venga suitcase of courage cutters kolobnev molenberg.</p>
 
 
   <!-- POST NAVIGATION -->
   <div class="postNav clearfix">
     
-      <a class="prev" href="/sassyinphilly/blog/test-post/"><span>&laquo;&nbsp;Test Post</span>
+      <a class="prev" href="/sassyinphilly/blog/partials-n-imports/"><span>&laquo;&nbsp;Partials and Imports</span>
       
     </a>
     
     
-      <a class="next" href="/sassyinphilly/blog/figure-with-caption/"><span>Figure With A Caption&nbsp;&raquo;</span>
+      <a class="next" href="/sassyinphilly/blog/extends-n-inheritance/"><span>Extends and Inheritance&nbsp;&raquo;</span>
       
       </a>
     
