@@ -1,0 +1,32 @@
+title: Your Blog
+description: An example blog site for the It's Always Sassy In Philadelphia workshop
+
+url: http://axamei.github.com
+baseurl: "/sassyinphilly"
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+highlighter: pygments
+gems: [jekyll-paginate]
+paginate: 5
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About
+   url: /about
+ - title: Contact
+   url: /contact
+
+social:
+   github: axamei
+   twitter: axamei
+   facebook: axamei
+   email: boss@axamei.com
+
+google_analytics: ""
+
+source: "app"
+destination: "dist"
+exclude: ["node_modules", "gulpfile.js", "package.json", "images", "styles", "scripts"]
+keep_files: ["images", "styles", "scripts"]
