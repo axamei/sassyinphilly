@@ -48,7 +48,7 @@ Because.
 
 ## Organizing and Naming Things is Hard
 
-> Task #2: Organize your styles and give them appropriate names
+> Task #2: Organize your styles into sensible groups and give them practical names
 
 - SMACSS 
 - BEM
@@ -56,6 +56,13 @@ Because.
 ## Sass Basics
 
 > Task #3: Refactor your CSS file(s) to Sass / Sassy CSS files
+
+- Sass vs. SCSS Syntax
+- Variables
+- Nesting
+- Parent selectors
+- Mixins and includes
+- Extends and placeholders
 
 ## Working with Frameworks & Mixin Libraries
 
@@ -68,7 +75,7 @@ Because.
 
 ## Working with Build Tools
 
-> Task #5: Customize gulpfile
+> Task #5: Customize your gulpfile
 
 - Gulp 
 - Grunt, Broccoli, Brunch, Webpack, Etc.
