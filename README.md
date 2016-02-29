@@ -18,14 +18,15 @@ We will work through a number of hands on exercises touching on the topics above
 
 ### Requirements (Unix-based machines)
 
-1. Ruby: https://www.ruby-lang.org/en/documentation/installation/
-2. Node and NPM: https://nodejs.org/en/download/
+1. Ruby: https://www.ruby-lang.org/en/documentation/installation/ - tested on 2.2.x, Should work fine on 2.1.x or 2.3.x.
+2. Latest Stable Version Node and NPM: https://nodejs.org/en/download/ - Currently 4.3.1 or 5.7.x (Your mileage may vary using 5.7 on different OS versions.)
 
 ### Workshop setup:
 
-1. Clone this repository.
-2. Run the following command in your terminal: `bundle install && npm install`
-3. Serve up the site locally: `gulp serve`
+1. Make sure you have bundler installed
+2. Clone this repository.
+3. Run the following command in your terminal: `bundle install && npm install`
+4. Serve up the site locally: `gulp serve`
 
 ### Getting sassy without the terminal 
 
@@ -35,7 +36,7 @@ We will work through a number of hands on exercises touching on the topics above
 
 ## Why Sass?
 
-Because.
+Because. Wide support, even Bootstrap (4) switched to Sass. 
 
 ## Where to Begin? CSS Audit!
 
@@ -45,6 +46,8 @@ Because.
 - [Chrome DevTools Audit Panel](https://developer.chrome.com/devtools#audits)  can analyze a page as it loads. Then provides suggestions and optimizations for decreasing page load time and increase perceived (and real) responsiveness.
 - [CSS Dig](http://cssdig.com/) is an automated script that runs through all of your code to help you see it visually. A similar tool is [StyleStats](http://www.stylestats.org/) and [CSSStats](http://cssstats.com/), where you type in a url to survey its CSS.
 - [Dust-Me Selectors](https://addons.mozilla.org/en-US/firefox/addon/dust-me-selectors/) is an add-on for Firebug in Firefox that finds unused selectors.
+
+- [Ghost of Sytlesheets Past](https://github.com/pulibrary/pul_library_drupal/tree/a42d3dd45990051fc1bec5a81d90f5e468f64a87/sites/all/themes/pul_development_theme/css)
 
 ## Organizing and Naming Things is Hard
 
@@ -167,10 +170,27 @@ See: [*Css Tricks* - BEM 101](https://css-tricks.com/bem-101/)
 - Gulp 
 - Grunt, Broccoli, Brunch, Webpack, Etc.
 
+## Advanced
+
+> Task #6 Debugging using Sass
+- Using Sourcemaps 
+- Using Browsersync
+
+
+
+## Post CSS Fun
+- [Canadian Stylesheets](https://github.com/chancancode/postcss-canadian-stylesheets)
+- [LOL Cats](https://github.com/sandralundgren/postcss-lolcat-stylesheets)
+
+## The Future
+- CSS and SASS 
+
 ## References
 
 - [*Sass-lang* - Sass Documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 - [*Sass-lang* - Sass Basics](http://sass-lang.com/guide)
 - [*Sass Guidelines* - An opinionated styleguide for writing sane, maintainable and scalable Sass](http://sass-guidelin.es/)
 - [*The Sass Way* - Sass vs. SCSS: which syntax is better?](http://thesassway.com/editorial/sass-vs-scss-which-syntax-is-better)
+- [PostCSS](https://github.com/postcss/postcss)
+
 
