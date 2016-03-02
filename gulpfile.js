@@ -117,7 +117,7 @@ gulp.task('build:dev', ['jekyll:dev', 'styles', 'scripts', 'images'], function (
 
 gulp.task('serve', ['build:dev'], function () {
   browserSync({
-    port: 9000,
+    open: 'external',
     // tunnel: "sassyinphilly",
     server: {
       baseDir: ['./dist']
