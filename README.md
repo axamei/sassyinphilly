@@ -1,20 +1,20 @@
 # It's Always Sassy in Philadelphia
 
-Learn how to turn your 2000+ line spaghetti monster CSS file into a modular and manageable collection of components you can reuse! 
+Learn how to turn your 2000+ line spaghetti monster CSS file into a modular and manageable collection of components you can reuse!
 
 Presenters
 * Axa Liauw aliauw[ at ] princeton DOT edu
 * Kevin Reiss kr2 [ at ] princeton DOT edu
 
-Workshop will cover (in 3 hours): 
+Workshop will cover (in 3 hours):
 
-* overview of how to use Sass (CodeKit / Prepros, Rails, libsass, etc.) 
+* overview of how to use Sass (CodeKit / Prepros, Rails, libsass, etc.)
 * breaking things apart (CSS Stats, SublimeText plugins, browser extensions, etc.)
-* organizing and naming (SMACSS and BEM) 
-* creating reusable components with variables, mixins, extends (DRYing up your code with Sass basics) 
+* organizing and naming (SMACSS and BEM)
+* creating reusable components with variables, mixins, extends (DRYing up your code with Sass basics)
 * frameworks (Bootstrap, Foundation, Bourbon, Susy, Breakpoint, etc.)
-* build tools (Grunt, Gulp, etc.) 
-* other topics we might discuss: PostCSS 
+* build tools (Grunt, Gulp, etc.)
+* other topics we might discuss: PostCSS
 
 We will work through a number of hands on exercises touching on the topics above. These exercises will require the installation of a number of command line utilities that we will guide you through. It is recommended attendees come to the workshop with a machine capable of running OSX with Homebrew or Linux. Windows users will expected to be able to run a virtual instance of Linux using a tool like VirtualBox.
 
@@ -43,18 +43,18 @@ Please try one of these two options before the workshop:
   * Windows will also need (Putty and PuttyGen)[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html] in order to be able to connect to your virtual server
 3. Download workshop [Vagrantfile](https://github.com/kevinreiss/sassyvagrant/archive/master.zip)
 4. Change to the directory where you extracted the workshop file and run ```vagrant up```. Windows users should review (Guide to Vagrant on Windows)[http://www.sitepoint.com/getting-started-vagrant-windows/].
-5. After Vagrant competes it's initialization you should be able to run `vagrant ssh` and enter the virtual machine to being interacting with the workshop materils. Windows users will need to review the section "Now I Can Access my Server, Right?" in the guide linked in the last step.
-6. After all the previous steps are down your workshop project will be located at ```/home/vagrant/sassinphilly``` on your vagrant box. 
+5. After Vagrant competes it's initialization you should be able to run `vagrant ssh` and enter the virtual machine to being interacting with the workshop materials. Windows users will need to review the section "Now I Can Access my Server, Right?" in the guide linked in the last step.
+6. After connecting via SSH to your virtual server you will find project will be located at ```/home/vagrant/sassinphilly``` on your vagrant box.
 
-### Getting sassy without the terminal 
+### Getting sassy without the terminal
 
 [CodeKit](https://incident57.com/codekit/) (Mac OS X) - CodeKit is a tool to compile Sass, LESS, Stylus, Jade and much more. It comes with Bower so you can import and manage dependencies / libraries simply. It also refreshes browsers across devices.
 
-[Prepros](http://prepros.io) (Windows, Mac OS X and Linux) - Prepros is a tool to compile Sass, LESS, Stylus, Jade and much more with automatic CSS prefixing. It comes with built in server for cross browser testing and automatic browser refresh. 
+[Prepros](http://prepros.io) (Windows, Mac OS X and Linux) - Prepros is a tool to compile Sass, LESS, Stylus, Jade and much more with automatic CSS prefixing. It comes with built in server for cross browser testing and automatic browser refresh.
 
 ## Why Sass?
 
-Because. Wide support, even Bootstrap (4) switched to Sass. 
+Because. Wide support, even Bootstrap (4) switched to Sass.
 
 ## Where to Begin? CSS Audit!
 
@@ -69,7 +69,7 @@ Because. Wide support, even Bootstrap (4) switched to Sass.
 
 > Task #2: Organize your styles into sensible groups and give them practical names
 
-We want to change from our singular 2000+ line CSS file to a more scalable and modular architecture for our styles. Break the files down into partials and organize them and name them in a sensible manner. Do what makes the most sense for your team. 
+We want to change from our singular 2000+ line CSS file to a more scalable and modular architecture for our styles. Break the files down into partials and organize them and name them in a sensible manner. Do what makes the most sense for your team.
 
 One approach:
 
@@ -102,52 +102,52 @@ stylesheets/
 Another approach:
 
 ```
-sass/ 
-| 
-|– base/ 
-|   |– _reset.scss       # Reset/normalize 
-|   |– _typography.scss  # Typography rules 
-|   ...                  # Etc… 
-| 
-|– components/ 
-|   |– _buttons.scss     # Buttons 
-|   |– _carousel.scss    # Carousel 
-|   |– _cover.scss       # Cover 
-|   |– _dropdown.scss    # Dropdown 
-|   |– _navigation.scss  # Navigation 
-|   ...                  # Etc… 
-| 
-|– helpers/ 
-|   |– _variables.scss   # Sass Variables 
-|   |– _functions.scss   # Sass Functions 
-|   |– _mixins.scss      # Sass Mixins 
-|   |– _helpers.scss     # Class & placeholders helpers 
-|   ...                  # Etc… 
-| 
-|– layout/ 
-|   |– _grid.scss        # Grid system 
-|   |– _header.scss      # Header 
-|   |– _footer.scss      # Footer 
-|   |– _sidebar.scss     # Sidebar 
-|   |– _forms.scss       # Forms 
-|   ...                  # Etc… 
-| 
-|– pages/ 
-|   |– _home.scss        # Home specific styles 
-|   |– _contact.scss     # Contact specific styles 
-|   ...                  # Etc… 
-| 
-|– themes/ 
-|   |– _theme.scss       # Default theme 
-|   |– _admin.scss       # Admin theme 
-|   ...                  # Etc… 
-| 
-|– vendors/ 
-|   |– _bootstrap.scss   # Bootstrap 
-|   |– _jquery-ui.scss   # jQuery UI 
-|   ...                  # Etc… 
-| 
-| 
+sass/
+|
+|– base/
+|   |– _reset.scss       # Reset/normalize
+|   |– _typography.scss  # Typography rules
+|   ...                  # Etc…
+|
+|– components/
+|   |– _buttons.scss     # Buttons
+|   |– _carousel.scss    # Carousel
+|   |– _cover.scss       # Cover
+|   |– _dropdown.scss    # Dropdown
+|   |– _navigation.scss  # Navigation
+|   ...                  # Etc…
+|
+|– helpers/
+|   |– _variables.scss   # Sass Variables
+|   |– _functions.scss   # Sass Functions
+|   |– _mixins.scss      # Sass Mixins
+|   |– _helpers.scss     # Class & placeholders helpers
+|   ...                  # Etc…
+|
+|– layout/
+|   |– _grid.scss        # Grid system
+|   |– _header.scss      # Header
+|   |– _footer.scss      # Footer
+|   |– _sidebar.scss     # Sidebar
+|   |– _forms.scss       # Forms
+|   ...                  # Etc…
+|
+|– pages/
+|   |– _home.scss        # Home specific styles
+|   |– _contact.scss     # Contact specific styles
+|   ...                  # Etc…
+|
+|– themes/
+|   |– _theme.scss       # Default theme
+|   |– _admin.scss       # Admin theme
+|   ...                  # Etc…
+|
+|– vendors/
+|   |– _bootstrap.scss   # Bootstrap
+|   |– _jquery-ui.scss   # jQuery UI
+|   ...                  # Etc…
+|
+|
 `– main.scss             # primary Sass file
 ```
 
@@ -176,26 +176,26 @@ See: [*Css Tricks* - BEM 101](https://css-tricks.com/bem-101/)
 
 - Bootstrap & Foundation
 - Bourbon, Neat, Bitters, Refills
-- Susy 
+- Susy
 - Breakpoint
 
 ## Working with Build Tools
 
 > Task #5: Understanding and customizing your gulpfile
 
-- Gulp 
+- Gulp
 - Grunt, Broccoli, Brunch, Webpack, Etc.
 
 ## Advanced
 
 > Task #6 Debugging using Sass
 
-- Using Sourcemaps 
+- Using Sourcemaps
 - Using Browsersync
 
 ## The Future
 - CSS Variables
-- CSS Modules 
+- CSS Modules
 - PostCSS
 	+ [Canadian Stylesheets](https://github.com/chancancode/postcss-canadian-stylesheets)
 	+ [LOL Cats](https://github.com/sandralundgren/postcss-lolcat-stylesheets)
@@ -207,5 +207,3 @@ See: [*Css Tricks* - BEM 101](https://css-tricks.com/bem-101/)
 - [*Sass Guidelines* - An opinionated styleguide for writing sane, maintainable and scalable Sass](http://sass-guidelin.es/)
 - [*The Sass Way* - Sass vs. SCSS: which syntax is better?](http://thesassway.com/editorial/sass-vs-scss-which-syntax-is-better)
 - [PostCSS](https://github.com/postcss/postcss)
-
-
