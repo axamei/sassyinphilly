@@ -40,7 +40,7 @@ Please try and complete one of these two options before the workshop:
 #### Option 2 - Use Vagrant and Virtualbox to run a Virtual Server
 1. Download and install [Virtual Box](https://www.virtualbox.org/wiki/Downloads) for your OS
 2. Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
-  * Windows will also need (Putty and PuttyGen)[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html] in order to be able to connect to your virtual server
+  * Windows users will also need (Putty and PuttyGen)[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html] in order to be able to connect to your virtual server
 3. Download workshop [Vagrantfile](https://github.com/kevinreiss/sassyvagrant/archive/master.zip)
 4. Change to the directory where you extracted the workshop file and run ```vagrant up```. Windows users should review (Guide to Vagrant on Windows)[http://www.sitepoint.com/getting-started-vagrant-windows/].
 5. After Vagrant competes it's initialization you should be able to run `vagrant ssh` and enter the virtual machine to being interacting with the workshop materials. Windows users will need to review the section "Now I Can Access my Server, Right?" in the guide linked in the last step.
