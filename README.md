@@ -44,6 +44,7 @@ Please try one of these two options before the workshop if you can. Let
 3. Download workshop [Vagrantfile](https://github.com/kevinreiss/sassyvagrant/archive/master.zip)
 4. Change to the directory where you extracted the workshop file and run ```vagrant up```. Windows users should review (Guide to Vagrant on Windows)[http://www.sitepoint.com/getting-started-vagrant-windows/].
 5. After Vagrant competes it's initialization you should be able to run `vagrant ssh` and enter the virtual machine to being interacting with the workshop materils. Windows users will need to review the section "Now I Can Access my Server, Right?" in the guide linked in the last step.
+6. After all the previous steps are down your workshop project will be located at ```/home/vagrant/sassinphilly``` on your vagrant box. 
 
 ### Getting sassy without the terminal 
 
