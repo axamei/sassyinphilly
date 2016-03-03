@@ -11,7 +11,7 @@ gulp.task('styles', function () {
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: [
-        // require('node-normalize-scss').includePaths,
+        './node_modules/bootstrap-sass/assets/stylesheets/',
         require('bourbon').includePaths,
         './node_modules/susy/sass/',
         './node_modules/breakpoint-sass/stylesheets/'],
