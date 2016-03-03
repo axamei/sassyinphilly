@@ -23,11 +23,11 @@ We will work through a number of hands on exercises touching on the topics above
 ### Requirements (Unix-based machines)
 
 1. Ruby: https://www.ruby-lang.org/en/documentation/installation/ - tested on 2.2.x, Should work fine on 2.1.x or 2.3.x.
-2. Latest Stable Version Node and NPM: https://nodejs.org/en/download/ - Currently 4.3.1 or 5.7.x (Your mileage may vary using 5.7 on different OS versions.)
+2. Latest Stable Version of Node and NPM: https://nodejs.org/en/download/ - Currently 4.3.x (LTS) or 5.7.x (Stable) (Your mileage may vary using 5.7 depending on the OS versions.)
 
 ### Workshop setup
 
-Please try one of these two options before the workshop:
+Please try and complete one of these two options before the workshop:
 
 #### Option 1 - I'm Comfortable with building my own software
 
@@ -35,7 +35,7 @@ Please try one of these two options before the workshop:
 2. Clone this repository. `git clone https://github.com/axamei/sassyinphilly.git`
 3. ```cd sassyinphilly```
 3. Run the following command in your terminal: `bundle install && npm install`
-4. Serve up the site locally: `gulp serve` at [http://localhost:3000](http://localhost:3000)
+4. Serve up the site locally via: `gulp serve` at [http://localhost:3000](http://localhost:3000)
 
 #### Option 2 - Use Vagrant and Virtualbox to run a Virtual Server
 1. Download and install [Virtual Box](https://www.virtualbox.org/wiki/Downloads) for your OS
@@ -44,7 +44,8 @@ Please try one of these two options before the workshop:
 3. Download workshop [Vagrantfile](https://github.com/kevinreiss/sassyvagrant/archive/master.zip)
 4. Change to the directory where you extracted the workshop file and run ```vagrant up```. Windows users should review (Guide to Vagrant on Windows)[http://www.sitepoint.com/getting-started-vagrant-windows/].
 5. After Vagrant competes it's initialization you should be able to run `vagrant ssh` and enter the virtual machine to being interacting with the workshop materials. Windows users will need to review the section "Now I Can Access my Server, Right?" in the guide linked in the last step.
-6. After connecting via SSH to your virtual server you will find project will be located at ```/home/vagrant/sassinphilly``` on your vagrant box.
+6. After connecting via SSH to your virtual server you will find this project located at ```/home/vagrant/sassinphilly``` on your vagrant box. Change to that directory and serve up the site locally via: `gulp serve` at [http://localhost:3000](http://localhost:3000)
+
 
 ### Getting sassy without the terminal
 
