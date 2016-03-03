@@ -2,6 +2,10 @@
 
 Learn how to turn your 2000+ line spaghetti monster CSS file into a modular and manageable collection of components you can reuse! 
 
+Presenters
+* Axa Liauw aliauw[ at ] princeton DOT edu
+* Kevin Reiss kr2 [ at ] princeton DOT edu
+
 Workshop will cover (in 3 hours): 
 
 * overview of how to use Sass (CodeKit / Prepros, Rails, libsass, etc.) 
@@ -21,12 +25,25 @@ We will work through a number of hands on exercises touching on the topics above
 1. Ruby: https://www.ruby-lang.org/en/documentation/installation/ - tested on 2.2.x, Should work fine on 2.1.x or 2.3.x.
 2. Latest Stable Version Node and NPM: https://nodejs.org/en/download/ - Currently 4.3.1 or 5.7.x (Your mileage may vary using 5.7 on different OS versions.)
 
-### Workshop setup:
+### Workshop setup
+
+Please try one of these two options before the workshop if you can. Let 
+
+#### Option 1 - I'm Comfortable with building my own software
 
 1. Make sure you have bundler installed
-2. Clone this repository.
+2. Clone this repository. `git clone https://github.com/axamei/sassyinphilly.git`
+3. ```cd sassyinphilly```
 3. Run the following command in your terminal: `bundle install && npm install`
-4. Serve up the site locally: `gulp serve`
+4. Serve up the site locally: `gulp serve` at [http://localhost:3000](http://localhost:3000)
+
+#### Option 2 - Use Vagrant and Virtualbox to run a Virtual Server
+1. Download and install [Virtual Box](https://www.virtualbox.org/wiki/Downloads) for your OS
+2. Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
+  * Windows will also need (Putty and PuttyGen)[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html] in order to be able to connect to your virtual server
+3. Download workshop [Vagrantfile](https://github.com/kevinreiss/sassyvagrant/archive/master.zip)
+4. Change to the directory where you extracted the workshop file and run ```vagrant up```. Windows users should review (Guide to Vagrant on Windows)[http://www.sitepoint.com/getting-started-vagrant-windows/].
+5. After Vagrant competes it's initialization you should be able to run `vagrant ssh` and enter the virtual machine to being interacting with the workshop materils. Windows users will need to review the section "Now I Can Access my Server, Right?" in the guide linked in the last step.
 
 ### Getting sassy without the terminal 
 
