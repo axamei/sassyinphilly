@@ -1,0 +1,59 @@
+---
+layout: post
+title:  "Why Sass?"
+date:   2015-12-31
+---
+
+<p class="intro"><span class="dropcap">D</span>o you ever weep, first with bewilderment, then frustration when you are asked to work on a newly discovered legacy project, and then ask yourself,  “How the !@#$ do you maintain this?!”?</p>
+
+See: [*Why Sass?* - Dan Cederholm](http://alistapart.com/article/why-sass)
+
+Ever needed to change, say, a color in your stylesheet, and found that you had to find and replace the value multiple times? Don’t you wish CSS allowed you to do this?
+
+{% highlight css %}
+$brand-color: #fc3;
+
+a {
+  color: $brand-color;
+}
+
+nav {
+  background-color: $brand-color;
+}
+{% endhighlight %}
+
+What if you could change that value in one place and the entire stylesheet reflected that change? You can with Sass!
+
+Or how about repeated blocks of styles that are used in various locations throughout the stylesheet?
+
+{% highlight css %}
+p {
+  margin-bottom: 20px; font-size: 14px; line-height: 1.5;
+}
+
+footer {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+{% endhighlight %}
+
+Wouldn’t it be fantastic to roll those shared rules into a reusable block? Again, defined only once but included wherever you needed them.
+
+{% highlight sass %}
+@mixin default-type {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+p {
+  @include default-type;
+}
+
+footer {
+  @include default-type;
+}
+{% endhighlight %}
+
+That’s Sass! And those two extremely simple examples barely scratch the surface as to how Sass makes authoring stylesheets faster, easier, and more flexible. It’s a welcome helper in the world of web design, because anyone that’s created a website knows that CSS is hard, and hard to maintain.
