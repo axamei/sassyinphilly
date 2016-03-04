@@ -55,7 +55,7 @@ Please try and complete one of these two options before the workshop:
 
 ## Why Sass?
 
-Because. Wide support, even Bootstrap and Foundation switched to Sass.
+Because. Wide support, even Bootstrap and Foundation switched to Sass. Read how it works at scale at [ETSY](https://codeascraft.com/2015/02/02/transitioning-to-scss-at-scale/)
 
 ## Where to Begin? CSS Audit!
 

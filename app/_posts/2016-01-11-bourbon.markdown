@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "Frameworks"
+date:   2016-01-11
+---
+
+* Mixin Library for Repetitive and Verbose CSS Tasks
+* Can be layered on top of any existing markup
+
+## Basics
+### Prefixes
+{% highlight sass %}
+{% endhighlight %}
+
+### Clearfix
+{% highlight sass %}
+{% endhighlight %}
+
+### Pixels to Ems
+{% highlight sass %}
+{% endhighlight %}
+
+### Flexbox
+{% highlight sass %}
+{% endhighlight %}
+
+## A La Care Framework
+
+### Grids (NEAT)
+
+### Base Styles (Bitters)
+
+### Widgets/Components (Refills)
