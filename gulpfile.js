@@ -1,8 +1,18 @@
+'use strict';
+
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var ghPages = require('gulp-gh-pages');
+var scsslint = require('gulp-sass-lint');
+
+gulp.task('scss-lint', function() {
+  return gulp.src('./app/styles/**/*.scss')
+    .pipe(scsslint())
+    .pipe(scsslint.format())
+    .pipe(scsslint.failOnError())
+});
 
 gulp.task('styles', function () {
   return gulp.src('./app/styles/main.scss')
@@ -46,7 +56,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function(){
-  gulp.src('./app/scripts/**/*.js')
+  return gulp.src('./app/scripts/**/*.js')
     .pipe($.sourcemaps.init())
     .pipe($.uglify({preserveComments: 'some'}))
     .pipe($.sourcemaps.write('.'))
