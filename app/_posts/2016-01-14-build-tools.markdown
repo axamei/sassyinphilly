@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Working with build tools"
+title:  "Working with Build Tools"
 date:   2016-01-14
 ---
 
 Gulp, Grunt, Broccoli, Brunch, Webpack, npm scripts, etc.
 
 Our gulpfile includes the following tasks:
+
+- Sass linting to keep the cruft out of our stylesheets
 - Error handling and growl-like notification
 - Sourcemaps to help us know where in the source our rules are located
 - Sass compilation using libsass

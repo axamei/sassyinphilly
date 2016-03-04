@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Break Point"
-date:   2016-01-15
+title:  "Breakpoint"
+date:   2016-01-13
 ---
 
 * [Breakpoint](http://breakpoint-sass.com/)

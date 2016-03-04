@@ -20,12 +20,12 @@ body {
 	p , ul {
 		margin: 0 0 2rem;
 	}
+}
 
-	p code {
+code {
 		color: $primary-color;
 		font-weight: 700;
 	}
-}
 
 // Text Selection Styling
 ::-moz-selection {
