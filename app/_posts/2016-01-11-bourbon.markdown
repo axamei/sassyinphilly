@@ -4,30 +4,304 @@ title:  "Bourbon"
 date:   2016-01-11
 ---
 
+See: [*Bourbon Documentation* - Thoughtbot](http://bourbon.io/docs/)
+
 * Mixin Library for Repetitive and Verbose CSS Tasks
 * Can be layered on top of any existing markup
 
-## Basics
-### Prefixes
+## Examples of Mixins
+
+###Font Face
+
+This shorthand: 
 {% highlight sass %}
+@include font-face("My Font", "/fonts/my-custom-font/my-custom-font-regular");
+
+// You can include $file-formats: eot woff2 woff to specify which formats you want
 {% endhighlight %}
 
-### Clearfix
+Compiles to:
 {% highlight sass %}
+@font-face {
+  font-family: "My Font";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/my-custom-font/my-custom-font-regular.eot?#iefix") format("embedded-opentype"), url("/fonts/my-custom-font/my-custom-font-regular.woff2") format("woff2"), url("/fonts/my-custom-font/my-custom-font-regular.woff") format("woff"), url("/fonts/my-custom-font/my-custom-font-regular.ttf") format("truetype"), url("/fonts/my-custom-font/my-custom-font-regular.svg#My Font") format("svg");
+}
 {% endhighlight %}
 
-### Pixels to Ems
+###Linear Gradient
+
+This shorthand: 
 {% highlight sass %}
+.header {
+  @include linear-gradient(to top, #8fdce5, #3dc3d1, $fallback: red);
+}
 {% endhighlight %}
 
-### Flexbox
+Compiles to:
 {% highlight sass %}
+.header {
+  background-color: red;
+  background-image: -webkit-linear-gradient(bottom, #8fdce5, #3dc3d1);
+  background-image: linear-gradient(to top,#8fdce5, #3dc3d1);
+}
 {% endhighlight %}
 
-## A La Care Framework
+###Placeholder
 
-### Grids (NEAT)
+This shorthand: 
+{% highlight sass %}
+input {
+  width: 300px;
+
+  @include placeholder {
+    color: red;
+  }
+}
+{% endhighlight %}
+
+Compiles to:
+{% highlight sass %}
+input {
+  width: 300px;
+}
+
+input::-webkit-input-placeholder {
+  color: red;
+}
+input:-moz-placeholder {
+  color: red;
+}
+input::-moz-placeholder {
+  color: red;
+}
+input:-ms-input-placeholder {
+  color: red;
+}
+{% endhighlight %}
+
+## Examples of Functions
+
+### Modular Scale
+
+This function:
+{% highlight sass %}
+$modular-scale-ratio: $golden;
+$modular-scale-base: 1.2em;
+
+// Increment two steps up the golden scale
+.pull-quote--golden {
+  font-size: modular-scale(2);
+}
+
+// Increment three steps up the 1.234 scale, with a base value of 2em
+.pull-quote {
+  font-size: modular-scale(3, 2em, 1.234);
+}
+{% endhighlight %}
+
+Compiles to:
+{% highlight sass %}
+.pull-quote--golden {
+  font-size: 3.14151em;
+}
+
+.pull-quote {
+  font-size: 3.75816em;
+}
+{% endhighlight %}
+
+### Pixels to EMs and REMs
+
+This function:
+{% highlight sass %}
+.small {
+  font-size: em(12);
+}
+{% endhighlight %}
+
+Compiles to:
+{% highlight sass %}
+.small {
+  font-size: 0.75em;
+}
+{% endhighlight %}
+
+### Tint and Shade
+
+This function:
+{% highlight sass %}
+.color--dark {
+  background: shade(#B4D455, 60%);
+}
+
+.color--muted {
+  background: tint(#B4D455, 60%);
+}
+{% endhighlight %}
+
+Compiles to:
+{% highlight sass %}
+.color--dark {
+  background: #485522;
+}
+
+.color--muted {
+  background: #e1eebb;
+}
+{% endhighlight %}
+
+##Examples of Add-Ons
+
+###Clearfix
+
+This add-on:
+{% highlight sass %}
+.wrapper {
+  @include clearfix;
+}
+{% endhighlight %}
+
+Compiles to:
+{% highlight sass %}
+.wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+{% endhighlight %}
+
+###Prefixer
+
+This add-on:
+{% highlight sass %}
+@mixin box-sizing($box) {
+  @include prefixer(box-sizing, $box, webkit moz spec);
+}
+{% endhighlight %}
+
+Compiles to:
+{% highlight sass %}
+-webkit-box-sizing: $box;
+   -moz-box-sizing: $box;
+        box-sizing: $box;
+{% endhighlight %}
+
+###Text Inputs
+
+This add-on:
+{% highlight sass %}
+#{$all-text-inputs} {
+  border: 1px solid #f00;
+}
+
+#{$all-text-inputs-focus},
+#{$all-text-inputs-hover} {
+  border: 1px solid #0f0;
+}
+
+#{$all-text-inputs-active} {
+  border: 1px solid #00f;
+}
+{% endhighlight %}
+
+Compiles to:
+{% highlight sass %}
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea {
+  border: 1px solid #f00;
+}
+
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+textarea:focus,
+input[type="color"]:hover,
+input[type="date"]:hover,
+input[type="datetime"]:hover,
+input[type="datetime-local"]:hover,
+input[type="email"]:hover,
+input[type="month"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:hover,
+input[type="time"]:hover,
+input[type="url"]:hover,
+input[type="week"]:hover,
+textarea:hover {
+  border: 1px solid #0f0;
+}
+
+input[type="color"]:active,
+input[type="date"]:active,
+input[type="datetime"]:active,
+input[type="datetime-local"]:active,
+input[type="email"]:active,
+input[type="month"]:active,
+input[type="number"]:active,
+input[type="password"]:active,
+input[type="search"]:active,
+input[type="tel"]:active,
+input[type="text"]:active,
+input[type="time"]:active,
+input[type="url"]:active,
+input[type="week"]:active,
+textarea:active {
+  border: 1px solid #00f;
+}
+{% endhighlight %}
+
+---
+
+### Grids (Neat)
+
+See: [*Neat Examples* - Thoughtbot](http://neat.bourbon.io/examples/)
+
+Neat is a lightweight **semantic** grid framework for Sass and Bourbon. It relies entirely on Sass mixins and does not pollute your HTML with presentation classes and extra wrapping `div`'s. It also aims to stay as **lightweight** as possible; just enough to handle the most common grid uses in modern Web design. You can even change the grid settings in a specific breakpoint so that it's **responsive**.
+
+<img src="{{ '/images/neat.png' | prepend: site.baseurl }}" alt="Neat basic grid">
+
+<img src="{{ '/images/neat-responsive.png' | prepend: site.baseurl }}" alt="Neat responsive grid">
 
 ### Base Styles (Bitters)
 
+See: [*Bitters Examples* - Thoughtbot](http://bitters.bourbon.io/example.html)
+
+Bitters provides base styling for Bourbon projects. It helps you start easily with scaffolding styles, variables and structure. This, in combination with Refills, gives you a great alternative to existing frameworks like Bootstrap and Foundation.
+
+<img src="{{ '/images/bitters.png' | prepend: site.baseurl }}" alt="Bitters example">
+
 ### Widgets/Components (Refills)
+
+See: [*Refills Examples* - Thoughtbot](http://refills.bourbon.io/)
+
+Refills provides components and patterns built with Bourbon and Neat. These widgets help you develop a rapid prototype for your projects.
+
+<img src="{{ '/images/refills.png' | prepend: site.baseurl }}" alt="Refills example">
