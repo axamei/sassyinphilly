@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Operators"
-date:   2016-01-07
+date:   2016-01-08
 ---
 
 <p class="intro"><span class="dropcap">D</span>oing math in your CSS is very helpful. Sass has a handful of standard math operators like +, -, *, /, and %. In our example we're going to do some simple math to calculate widths for an aside and article.</p>

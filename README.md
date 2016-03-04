@@ -61,7 +61,7 @@ Because. Wide support, even Bootstrap and Foundation switched to Sass.
 
 > Task #1: Audit your existing CSS file(s)
 
-- Look at your CSS file(s)
+- Linting: [CSS Lint](http://csslint.net/) pinpoints issues in your CSS. Take the warnings as suggestions on how to improve your CSS. 
 - Find unused CSS: [Chrome DevTools Audit Panel](https://developer.chrome.com/devtools#audits)  can analyze a page as it loads. Then provides suggestions and optimizations for decreasing page load time and increase perceived (and real) responsiveness. [Dust-Me Selectors](https://addons.mozilla.org/en-US/firefox/addon/dust-me-selectors/) is an add-on for Firebug in Firefox that finds unused selectors.
 - Survey what CSS rules you have: [CSS Dig](http://cssdig.com/) is an automated script that runs through all of your code to help you see it visually. A similar tool is [StyleStats](http://www.stylestats.org/) and [CSSStats](http://cssstats.com/), where you type in a url to survey its CSS.
 - [Ghost of Sytlesheets Past](https://github.com/pulibrary/pul_library_drupal/tree/a42d3dd45990051fc1bec5a81d90f5e468f64a87/sites/all/themes/pul_development_theme/css)
