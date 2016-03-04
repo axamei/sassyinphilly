@@ -40,9 +40,9 @@ Please try and complete one of these two options before the workshop:
 #### Option 2 - Use Vagrant and Virtualbox to run a Virtual Server
 1. Download and install [Virtual Box](https://www.virtualbox.org/wiki/Downloads) for your OS
 2. Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
-  * Windows users will also need (Putty and PuttyGen)[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html] in order to be able to connect to your virtual server
+  * Windows users will also need [Putty and PuttyGen](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) in order to be able to connect to your virtual server
 3. Download workshop [Vagrantfile](https://github.com/kevinreiss/sassyvagrant/archive/master.zip)
-4. Change to the directory where you extracted the workshop file and run ```vagrant up```. Windows users should review (Guide to Vagrant on Windows)[http://www.sitepoint.com/getting-started-vagrant-windows/].
+4. Change to the directory where you extracted the workshop file and run ```vagrant up```. Windows users should review [Guide to Vagrant on Windows](http://www.sitepoint.com/getting-started-vagrant-windows/).
 5. After Vagrant competes it's initialization you should be able to run `vagrant ssh` and enter the virtual machine to being interacting with the workshop materials. Windows users will need to review the section "Now I Can Access my Server, Right?" in the guide linked in the last step.
 6. After connecting via SSH to your virtual server you will find this project located at ```/home/vagrant/sassinphilly``` on your vagrant box. Change to that directory and serve up the site locally via: `gulp serve` at [http://localhost:3000](http://localhost:3000)
 
@@ -55,7 +55,7 @@ Please try and complete one of these two options before the workshop:
 
 ## Why Sass?
 
-Because. Wide support, even Bootstrap (4) switched to Sass.
+Because. Wide support, even Bootstrap and Foundation switched to Sass.
 
 ## Where to Begin? CSS Audit!
 
@@ -184,20 +184,25 @@ See: [*Css Tricks* - BEM 101](https://css-tricks.com/bem-101/)
 
 > Task #5: Understanding and customizing your gulpfile
 
-- Gulp
-- Grunt, Broccoli, Brunch, Webpack, Etc.
+- Gulp, Grunt, Broccoli, Brunch, Webpack, npm scripts, etc.
 
-## Advanced
-
-> Task #6 Debugging using Sass
-
-- Using Sourcemaps
-- Using Browsersync
+Our gulpfile includes the following tasks:
+- Error handling and growl-like notification
+- Sourcemaps to help us know where in the source our rules are located
+- Sass compilation using libsass
+- UnCSS to remove unused CSS selectors and slim down our CSS 
+- Concatination and minification of our files
+- Autoprefixer to prefix CSS with vendor prefixes
+- Using Browsersync for multi-device testing
+- Optimizing images
+- Building our Jekyll site
+- Deploying our site to gh-pages
 
 ## The Future
-- CSS Variables
-- CSS Modules
-- PostCSS
+- [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
+- [CSS Modules](http://glenmaddern.com/articles/css-modules)
+- [PostCSS](http://postcss.org/)
+	+ [PreCSS](https://github.com/jonathantneal/precss)
 	+ [Canadian Stylesheets](https://github.com/chancancode/postcss-canadian-stylesheets)
 	+ [LOL Cats](https://github.com/sandralundgren/postcss-lolcat-stylesheets)
 
@@ -207,4 +212,4 @@ See: [*Css Tricks* - BEM 101](https://css-tricks.com/bem-101/)
 - [*Sass-lang* - Sass Basics](http://sass-lang.com/guide)
 - [*Sass Guidelines* - An opinionated styleguide for writing sane, maintainable and scalable Sass](http://sass-guidelin.es/)
 - [*The Sass Way* - Sass vs. SCSS: which syntax is better?](http://thesassway.com/editorial/sass-vs-scss-which-syntax-is-better)
-- [PostCSS](https://github.com/postcss/postcss)
+- [*Transitioning to SCSS at Scale* - Dan Na](https://codeascraft.com/2015/02/02/transitioning-to-scss-at-scale/)
