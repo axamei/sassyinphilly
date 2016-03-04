@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Working with build tools"
-date:   2016-01-10
+date:   2016-01-14
 ---
 
 Gulp, Grunt, Broccoli, Brunch, Webpack, npm scripts, etc.
