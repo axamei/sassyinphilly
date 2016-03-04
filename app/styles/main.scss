@@ -1,4 +1,5 @@
 // Dependencies
+@import "modules/bootstrap-overrides";
 @import "bootstrap";
 @import "susy";
 @import "bourbon";
@@ -18,7 +19,6 @@
 @import "modules/forms";
 @import "modules/tables";
 @import "modules/syntax";
-@import "modules/bootstrap-overrides";
 
 // Mobile up base styles
 @import "breakpoints/mobileup";
