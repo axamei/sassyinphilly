@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why Sass?"
-date:   2015-12-31
+date:   2015-12-29
 ---
 
 <p class="intro"><span class="dropcap">D</span>o you ever weep, first with bewilderment, then frustration when you are asked to work on a newly discovered legacy project, and then ask yourself,  “How the !@#$ do you maintain this?!”?</p>
@@ -28,7 +28,9 @@ Or how about repeated blocks of styles that are used in various locations throug
 
 {% highlight css %}
 p {
-  margin-bottom: 20px; font-size: 14px; line-height: 1.5;
+  margin-bottom: 20px; 
+  font-size: 14px; 
+  line-height: 1.5;
 }
 
 footer {

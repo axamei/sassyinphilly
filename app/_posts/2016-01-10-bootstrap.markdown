@@ -144,18 +144,18 @@ BUT, Bootstrap and Sass definitely make a great combo. Features in Sass like `@e
 
 {% highlight sass %}
 section {
-    @include make-row;
+  @include make-row;
 }
 .post {
-    @include make-xs-column(6);
-    @include make-sm-column(6);
+  @include make-xs-column(6);
+  @include make-sm-column(6);
 }
 .sidebar {
-    @include make-xs-column(4);
-    @include make-sm-column(4);
+  @include make-xs-column(4);
+  @include make-sm-column(4);
 }
 .column {
-    @include make-md-column(4);
+  @include make-md-column(4);
 }
 {% endhighlight %}
 

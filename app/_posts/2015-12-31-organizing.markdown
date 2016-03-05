@@ -98,16 +98,16 @@ sass/
 
 {% highlight css %}
 body, form {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    color: #039;
+  color: #039;
 }
 
 a:hover {
-    color: #03F;    
+  color: #03F;    
 }
 {% endhighlight %}
 
@@ -115,13 +115,13 @@ a:hover {
 
 {% highlight css %}
 .header, .article, .footer {
-    width: 960px;
-    margin: auto;
+  width: 960px;
+  margin: auto;
 }
 
 .article {
-    border: solid #CCC;
-    border-width: 1px 0 0;
+  border: solid #CCC;
+  border-width: 1px 0 0;
 }
 {% endhighlight %}
 
@@ -129,21 +129,21 @@ a:hover {
 
 {% highlight css %}
 .media {
-	margin:10px;
+  margin:10px;
 }
 
 .media, .copy {
-	overflow:hidden;
-	zoom:1;
+  overflow:hidden;
+  zoom:1;
 }
 
 .media .img {
-	float:left; 
-	margin-right: 10px;
+  float:left; 
+  margin-right: 10px;
 }
 
 .media .img img {
-	display:block;
+  display:block;
 }
 {% endhighlight %}
 
@@ -151,13 +151,13 @@ a:hover {
 
 {% highlight css %}
 .tab {
-    background-color: purple;
-    color: white;
+  background-color: purple;
+  color: white;
 }
 
 .is-tab-active {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 {% endhighlight %}
 
@@ -166,12 +166,12 @@ Finally, **Theme rules** are similar to state rules in that they describe how mo
 {% highlight css %}
 // in module-name.css
 .mod {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 // in theme.css
 .mod {
-    border-color: blue;
+  border-color: blue;
 }
 {% endhighlight %}
 
