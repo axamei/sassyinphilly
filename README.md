@@ -208,8 +208,17 @@ Our gulpfile includes the following tasks:
 
 ## References
 
+- [*An Introduction to Object Oriented CSS* - Louis Lazaris](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
+- [*BEM 101* - Robin Rendle](https://css-tricks.com/bem-101/)
+- [*Bitters Examples* - Thoughtbot](http://bitters.bourbon.io/example.html)
+- [*Boostrap Sass Mixins* - Twitter Bootstrap](https://github.com/twbs/bootstrap-sass/tree/5ad0746ff394aa810e730eefec69f65036450e66/assets/stylesheets/bootstrap/mixins)
+- [*Bourbon Documentation* - Thoughtbot](http://bourbon.io/docs/)
+- [*Neat Examples* - Thoughtbot](http://neat.bourbon.io/examples/)
+- [*Refills Examples* - Thoughtbot](http://refills.bourbon.io/)
 - [*Sass-lang* - Sass Documentation](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 - [*Sass-lang* - Sass Basics](http://sass-lang.com/guide)
 - [*Sass Guidelines* - An opinionated styleguide for writing sane, maintainable and scalable Sass](http://sass-guidelin.es/)
+- [*Scalable and Modular Architecture for CSS* - Jonathan Snook](https://smacss.com/book/)
 - [*The Sass Way* - Sass vs. SCSS: which syntax is better?](http://thesassway.com/editorial/sass-vs-scss-which-syntax-is-better)
 - [*Transitioning to SCSS at Scale* - Dan Na](https://codeascraft.com/2015/02/02/transitioning-to-scss-at-scale/)
+- [*Why Sass?* - Dan Cederholm](http://alistapart.com/article/why-sass)
