@@ -6,4 +6,241 @@ $susy: (
   columns: 12,
   gutters: 1/3,
   gutter-position: after,
+  debug: (
+    image: show,
+    color: rgba($orange, 0.25),
+    output: overlay,
+    toggle: top right,
+  ),
 );
+
+
+/*************
+For Grid Demos
+**************/
+
+/*******/
+$small: 400px;
+$tablet: 401px 699px;
+$standard: 700px;
+/*******/
+
+.susy-container {
+  @include container(800px);
+  @include clearfix;
+  @include border-width(.5em);
+  @include border-style(solid);
+}
+
+.susy-container {
+
+  .col-a {
+
+    @include breakpoint($small) {
+      @include span(12);
+    }
+    @include breakpoint($standard) {
+      @include span(6);
+    }
+    background-color: #fae7b3;
+    @include border-width(.5em);
+    @include border-style(dashed);
+  }
+
+  .col-b {
+    @include breakpoint($small) {
+      @include span(12);
+    }
+    @include breakpoint($standard) {
+      @include span(6 last);
+    }
+    background-color: #f09671;
+    @include border-width(.5em);
+    @include border-style(dashed);
+  }
+
+  .full-content {
+
+    @include breakpoint($small) {
+      @include span(12);
+    }
+
+    @include breakpoint($tablet) {
+      @include span(6 of 12);
+      @include pre(3);
+      @include post(3);
+    }
+
+    @include breakpoint($standard) {
+      @include span(10 of 12);
+      @include pre(1);
+      @include post(1);
+    }
+  
+    background-color: #ee9e9c;
+    @include border-width(.5em);
+    @include border-style(dashed);
+    
+  }
+}
+
+
+/********************
+For Asymmetric Demo
+********************/
+
+
+/*** 
+ Layout
+ ***/
+.complex-container {
+  @include container(10);
+  @include clearfix;
+  @include border-width(.5em);
+  @include border-style(solid);
+}
+
+.ag1 {
+  @include breakpoint($small) {
+    @include span(12);
+  }
+  @include breakpoint($standard) {
+    @include span(2 of 10);
+  }
+
+}
+
+.ag2 {
+
+  @include breakpoint($small) {
+    @include span(12);
+  }
+
+  @include breakpoint($standard) {
+    @include span(6 of 10);
+    @include clearfix; 
+  }
+}
+
+.ag3 {
+  @include breakpoint($small) {
+    @include span(12);
+  }
+  @include breakpoint($standard) {
+    @include span(2 of 10 last);
+  }
+}
+
+.ag4 {
+   @include breakpoint($small) {
+    @include span(12);
+  }
+
+  @include breakpoint($standard) {
+    @include span(3 of 6);
+  }
+}
+
+.ag5 {
+   @include breakpoint($small) {
+    @include span(12);
+  }
+  
+  @include breakpoint($standard) {
+    @include span(3 of 6 last);
+  }
+}
+
+.ag6 {
+  @include breakpoint($small) {
+    @include span(12);
+  }
+  @include breakpoint($standard) {
+    @include span(2 of 6);
+  }
+}
+
+.ag7 {
+  @include breakpoint($small) {
+    @include span(12);
+  }
+
+  @include breakpoint($standard) {
+    @include span(4 of 6 last);
+    @include clearfix;
+  }
+}
+
+.ag8 {
+  @include breakpoint($small) {
+    @include span(12);
+  }
+
+  @include breakpoint($standard) {
+    @include span(2 of 4);
+  }
+}
+
+.ag9 {
+  @include breakpoint($small) {
+    @include span(12);
+  }
+  @include breakpoint($standard) {
+    @include span(2 of 4 last);
+  }
+}
+
+.ag10 {
+  @include breakpoint($small) {
+    @include span(12);
+  }
+  // Use the full keyword to tell Susy this should be a 100% width 
+  @include breakpoint($standard) {
+    @include span(full);
+  }
+}
+
+
+
+/**
+ - Highlight Styles for AG grids & Container
+ */
+
+.asymm-container {
+  background-color: #fbeecb;
+}
+
+.ag1, .ag3 {
+  background-color: #71dad2;
+}
+
+.ag2 {
+  background-color: #fae7b3;
+}
+
+.ag4,.ag5,.ag8,.ag9 {
+  background-color: #ee9e9c;
+}
+
+.ag6 {
+  background-color: #f09671;
+}
+
+.ag7 {
+  background-color: #f6d784;
+}
+
+.ag10 {
+  background-color: #ea9fc3;
+}
+
+/**
+ - Text Styles
+ */
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
