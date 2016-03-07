@@ -32,6 +32,7 @@ Please try and complete one of these two options before the workshop:
 #### Option 1 - I'm Comfortable with building my own software
 
 1. Make sure you have bundler installed
+2. Intall gulp globally ```npm install --global gulp-cli``` (you may need to run this as ```sudo npm install --global gulp-cli``` depending on your environment)
 2. Clone this repository. `git clone https://github.com/axamei/sassyinphilly.git`
 3. ```cd sassyinphilly```
 3. Run the following command in your terminal: `bundle install && npm install`
