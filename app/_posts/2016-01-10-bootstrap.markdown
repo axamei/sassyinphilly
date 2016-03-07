@@ -6,7 +6,7 @@ date:   2016-01-10
 
 * Most popular framework
 * CSS & Javascript components
-* Styleguide - Basic styles for common HTML elements & patterns
+* Styleguide - Provides basic styles for common HTML elements & patterns
 * Grid management
 * Responsive support
 * Javascript widgets
