@@ -12,7 +12,7 @@ Workshop will cover (in 3 hours):
 * breaking things apart (CSS Stats, SublimeText plugins, browser extensions, etc.)
 * organizing and naming (SMACSS and BEM)
 * creating reusable components with variables, mixins, extends (DRYing up your code with Sass basics)
-* frameworks (Bootstrap, Foundation, Bourbon, Susy, Breakpoint, etc.)
+* frameworks and libraries(Bootstrap, Foundation, Bourbon, Susy, Breakpoint, etc.)
 * build tools (Grunt, Gulp, etc.)
 * other topics we might discuss: PostCSS
 

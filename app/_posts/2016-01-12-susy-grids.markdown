@@ -5,16 +5,22 @@ date:   2016-01-12
 ---
 
 * Project Slogan: `Your markup, your layout | our math`
-* [Susy](http://susy.oddbird.net/)
-* [Docs](http://susydocs.oddbird.net/en/latest/)
-* [Learn](http://susy.oddbird.net/demos/)
+* [Current Docs](http://susydocs.oddbird.net/en/latest/)
+* [Learn More](http://susy.oddbird.net/demos/)
 * [Read the Book](http://learnsusy.zellwk.com/)
 * Manage the layout of any arbitrary HTML in existing applications
 * Manage both fluid and fixed width grids
-* Ships with the following [defaults](http://susydocs.oddbird.net/en/latest/settings/#global-defaults) that define a four column floating grid
+* Built-in debugging
+* Tame the layout of vendor applications whose markup you can't sustainably control
+  + Drupal
+  + Atlas Systems
+  + Legacy ASP/.NET Applications 
+  + Ruby on Rails Projects
 
+## Define A Basic Grid
 
-## Define Some Basic Grid Parameters
+[Review Susy Defaults](http://susydocs.oddbird.net/en/latest/settings/#global-defaults). These define a four column floating grid. We'll override that to the following:
+
 {% highlight sass %}
 $susy: (
   columns: 12,
@@ -23,24 +29,26 @@ $susy: (
 );
 {% endhighlight %}
 
-## Define A Basic Grid
-* 800 pixels wide
-* 12 Units
-* Gutters are 1/3 the size of a column
+* 12 Units wide
+* Gutters are 1/3 the size of a column and position *after* a given column
+
+Let's apply this grid to the following html:
 
 {% highlight html %}
 <div class="susy-container">
   <div class="col-a">
-    <p>Foo</p>
+    <h2>Foo</h2>
   </div>
   <div class="col-b">
-    <p>Bar</p>
+    <h2>Bar</h2>
   </div>
   <div class="full-content">
-    <p>Foobar</p>
+    <h2>Foobar</h2>
   </div>
 </div>
 {% endhighlight %}
+
+Fully rendered it looks like:
 
 <div class="susy-container">
   <div class="col-a">
@@ -61,6 +69,7 @@ The basic sass required for the previous layout is:
 
 {% highlight sass %}
 .susy-container {
+  /* passes a fixed-width for the grid */
   @include container(800px);
   @include clearfix;
 }
@@ -90,9 +99,11 @@ The basic sass required for the previous layout is:
 
 ## Complex Grids
 
-Susy give you an opportunity to apply grid styles outside of the standard 12 Column, static grids Bootstrap and Foundation use by default. The next example was modified from "A Computer Tutorial to Susy 2" [Part One](http://zellwk.com/blog/susy2-tutorial/) and [Part Two](http://zellwk.com/blog/susy2-tutorial-2/).
+<p>Susy give you an opportunity to apply grid styles outside of the standard 12 Column, static grids Bootstrap and Foundation use by default. The next example was modified from "A Computer Tutorial to Susy 2" [Part One](http://zellwk.com/blog/susy2-tutorial/) and [Part Two](http://zellwk.com/blog/susy2-tutorial-2/).</p>
 
-Consider the Following HTML
+
+<p>Consider the Following HTML:</p>
+
 {% highlight html %}
 <div class="complex-container">
 <h1>The 10 column complex nested grid AG test</h1>
@@ -195,7 +206,7 @@ The Susy mixins needed to apply a 10 column to the markup listed above
 
 
 <div class="complex-container">
-  <h1>The 10 column complex nested grid AG test</h1>
+  <h1>A 10 column complex nested grid</h1>
 
   <div class="ag ag1">
     <h2>AG 1</h2>
@@ -240,6 +251,6 @@ The Susy mixins needed to apply a 10 column to the markup listed above
 </div>
 <!-- /container -->
 
-If you wish to experiment further this [Codepen](http://codepen.io/zellwk/pen/jDFdI) is a good place to start. 
+If you wish to do some further experimentation with Susy as a grid management tool this [Codepen](http://codepen.io/zellwk/pen/jDFdI) is a good place to start. 
 
 

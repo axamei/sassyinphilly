@@ -28,7 +28,7 @@ $standard: 700px;
 .susy-container {
   @include container(800px);
   @include clearfix;
-  @include border-width(.5em);
+  @include border-width(.3em);
   @include border-style(solid);
 }
 
@@ -43,7 +43,7 @@ $standard: 700px;
       @include span(6);
     }
     background-color: #fae7b3;
-    @include border-width(.5em);
+    @include border-width(.2em);
     @include border-style(dashed);
   }
 
@@ -52,10 +52,10 @@ $standard: 700px;
       @include span(12);
     }
     @include breakpoint($standard) {
-      @include span(6 last);
+      @include span(last 6);
     }
     background-color: #f09671;
-    @include border-width(.5em);
+    @include border-width(.2em);
     @include border-style(dashed);
   }
 
@@ -78,7 +78,7 @@ $standard: 700px;
     }
   
     background-color: #ee9e9c;
-    @include border-width(.5em);
+    @include border-width(.2em);
     @include border-style(dashed);
     
   }
@@ -206,7 +206,7 @@ For Asymmetric Demo
  - Highlight Styles for AG grids & Container
  */
 
-.asymm-container {
+.complex-container {
   background-color: #fbeecb;
 }
 
