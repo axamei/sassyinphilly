@@ -155,7 +155,7 @@ The basic sass required for the previous layout is:
 The Susy mixins needed to apply a 10 column to the markup listed above
 
 {% highlight sass %}
-.asymm-containter {
+.complex-container {
   @include container(10);
   @include clearfix;
 }
