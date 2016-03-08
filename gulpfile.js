@@ -128,7 +128,7 @@ gulp.task('build:dev', ['jekyll:dev', 'styles', 'scripts', 'images'], function (
 gulp.task('serve', ['build:dev'], function () {
   browserSync({
     open: 'external',
-    // tunnel: "sassyinphilly",
+    // tunnel: "sassyinphilly", // this creates a local tunnel for people outside of your network to see your project in development.. the url to use is displayed when you first run the gulp serve task if this is option is enabled. more info: http://localtunnel.me/
     server: {
       baseDir: ['./dist']
     }
